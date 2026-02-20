@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Generador de alumnos</title>
+    <script src="js/functions.js">
+
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>万物之父</h1>
+        <h3>Generador de Alumnos</h3>
+        <br>
+        <hr>
+        Cantidad de registros: <input type="numeric" id="registros" value="1" min="1" max="50000">
+        <input type="button" value="Registro 1" onclick="document.getElementById('registros').value = 1">
+        <input type="button" value="Registro 50000" onclick="document.getElementById('registros').value = 50000">
+        <br>Tipo de archivo: <select id="opcion">
+            <option value="1">SQL MySQL / MariaDB</option>
+            <option value="2">Postgresql</option>
+            <option value="3">CSV</option>
+            <option value="4">JSON</option>
+        </select>
+        <input type="button" value="Generar" onclick="generar()">
+        <input type="button" value="Guardar" onclick="guardar()">
+        <p id="salida"></p>
+    </div>
+</body>
+</html>
